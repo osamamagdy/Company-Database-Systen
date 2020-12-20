@@ -129,16 +129,20 @@ namespace DBapplication
         }
 
 
-
-        //(To be delivered next lab)
-        //
         //TODO:
         //5-Get employees names and salaries for all employees 
         //who work in a project located at "Stafford" or in "Houston" 
         //and work less than 35 hours. (1 marks)
 
-        //6- Allow user to update salary of an employee of a certain SSN. (1 mark)
+        public DataTable Get_By_project(string loc1,string loc2 , int hours)
+        {
+            string query = "select Fname, Salary From Employee Where SSN in ( " +
+                            "Select W.Essn From Works_On As W,Project As P Where W.Pno = P.Pnumber and " +
+                           " W.Hours < " + hours + "and ( P.Plocation = '" + loc1 + "' or P.Plocation = '" + loc2 + "' ))";
+            return dbMan.ExecuteReader(query);
+        }
 
+        //6- Allow user to update salary of an employee of a certain SSN. (1 mark)
         public int UpdateSalary( int number, string SSN)
         {
             string query = "  Update Employee set Salary= " + number + " where SSN = " + Int32.Parse(SSN) + " ; ";
@@ -147,13 +151,10 @@ namespace DBapplication
 
 
 
+        
+
         //7-Get the last names of department managers and their salaries. (1 mark)
-        //8-Get Name and SSN for all employees working in "Research" department or working on projects controlled by "Research" department. (2 marks)
-        //9-Get maximum, minimum and average salary for employees(1 mark)
-
-
-
-        public DataTable GetManagers() // 7
+        public DataTable GetManagers()
         {
 
             string query = "SELECT LNAME,SALARY FROM Employee,Department WHERE Employee.SSN = Department.Mgr_SSN";
@@ -163,14 +164,18 @@ namespace DBapplication
         }
 
 
-        public DataTable GetEmployee123(string Department)  // 8
+        //8-Get Name and SSN for all employees working in "Research" department or working on projects controlled by "Research" department. (2 marks)
+        public DataTable GetEmployee123(string Department)
         {
             string query = "SELECT DISTINCT Fname , SSN FROM Employee, Department, Project, Works_On WHERE(Employee.Dno = Department.Dnumber AND Department.Dname = '" + Department + "') OR(Works_On.Essn = Employee.SSN AND Works_On.Pno = Project.Pnumber AND Project.Dnum = Department.Dnumber AND Department.Dname = '" + Department+ "')";
 
             return dbMan.ExecuteReader(query);
         }
 
-        public DataTable GetMMA() //9
+
+
+        //9-Get maximum, minimum and average salary for employees(1 mark)
+        public DataTable GetMMA() 
         {
             string query = "SELECT AVG(SALARY),MAX(SALARY),MIN(SALARY) FROM Employee";
 

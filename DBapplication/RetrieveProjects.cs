@@ -41,7 +41,8 @@ namespace DBapplication
             dt = controllerObj.SelectProjectLoc();
             comboBox2.DataSource = dt;
             comboBox2.DisplayMember = "Plocation";
-            comboBox3.DataSource = dt;
+            DataTable dt2 = controllerObj.SelectProjectLoc(); 
+            comboBox3.DataSource = dt2;
             comboBox3.DisplayMember = "Plocation";
 
             //Data for Q8 Combobox
@@ -53,84 +54,93 @@ namespace DBapplication
         }
         private void RetrieveProjects_Load(object sender, EventArgs e)
         {
-           
-            
+
+
         }
 
         private void Execute_Click(object sender, EventArgs e)
         {
             controllerObj = new Controller();
-            if (Selector.SelectedIndex==0)
+            DataTable d;
+
+            switch (Selector.SelectedIndex)
             {
+                case 0:
+                    int s = Convert.ToInt32(Salary.Value);
 
-                int s = Convert.ToInt32(Salary.Value);
-                
-                 DataTable d= controllerObj.show_employees_by_salary(s);
 
-                dataGridView1.DataSource = d;
-                dataGridView1.Refresh();
+
+                    d = controllerObj.show_employees_by_salary(s);
+
+                    dataGridView1.DataSource = d;
+                    dataGridView1.Refresh();
+
+                    break;
+
+                case 1:
+                    string gen;
+                    if (Female.Checked)
+                        gen = "F";
+                    else
+                        gen = "M";
+                    string dep = Dep_comboBox.Text;
+                    d = controllerObj.show_Employees_by_gender_in_Dep(gen, dep);
+                    dataGridView1.DataSource = d;
+                    dataGridView1.Refresh();
+                    break;
+
+                case 2:
+
+                    string Dp = comboBox1.Text;
+                    d = controllerObj.Get_departments_names(Dp);
+
+                    dataGridView1.DataSource = d;
+                    dataGridView1.Refresh();
+
+                    break;
+
+                case 3:
+
+                    if (comboBox2.Text == "" || comboBox3.Text == "" || Hours.Value < 0)
+                    {
+                        MessageBox.Show("Please Enter all inputs");
+                    }
+
+                    d = controllerObj.Get_By_project(comboBox2.Text, comboBox3.Text, Convert.ToInt32(Hours.Value));
+
+                    dataGridView1.DataSource = d;
+                    dataGridView1.Refresh();
+                    break;
+
+                case 4:
+
+
+                    d = controllerObj.GetManagers();
+                    dataGridView1.DataSource = d;
+                    dataGridView1.Refresh();
+
+                    break;
+
+                case 5:
+
+                    d = controllerObj.GetEmployee123(comboBox4.Text);
+                    dataGridView1.DataSource = d;
+                    dataGridView1.Refresh();
+
+                    break;
+
+                case 6:
+
+                    DataTable dt = controllerObj.GetMMA();
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Refresh();
+
+                    break;
+
+                default:
+                    break;
             }
-            else if(Selector.SelectedIndex == 1)
-            {
 
-                string gen;
-                if (Female.Checked&& !Male.Checked)
-                    gen = "F";
-                else if(Male.Checked&&!Female.Checked)
-                {
-
-                    gen = "M";
-                }
-                else if(!Male.Checked && !Female.Checked)
-                {
-                    MessageBox.Show("Please Select the Gender");
-                    return;
-
-                }
-                else
-                {
-                    return;
-                }
-
-                string dep = Dep_comboBox.Text;
-                 DataTable d= controllerObj.show_Employees_by_gender_in_Dep(gen, dep);
-                dataGridView1.DataSource = d;
-                dataGridView1.Refresh();
-
-            }
-            else if(Selector.SelectedIndex == 2)
-            {
-                string Dp = comboBox1.Text;
-                DataTable d = controllerObj.Get_departments_names(Dp);
-
-                dataGridView1.DataSource = d;
-                dataGridView1.Refresh();
-            }
-
-            if (Selector.SelectedIndex == 4)
-            {
-                DataTable dt = controllerObj.GetManagers();
-                dataGridView1.DataSource = dt;
-                dataGridView1.Refresh();
-            }
-
-            if (Selector.SelectedIndex == 5)
-            {
-                DataTable dt = controllerObj.GetEmployee123(comboBox4.Text);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Refresh();
-            }
-            if (Selector.SelectedIndex == 6)
-            {
-               DataTable dt = controllerObj.GetMMA();
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns[0].HeaderText = "AVG";
-                dataGridView1.Columns[1].HeaderText = "MAX";
-                dataGridView1.Columns[2].HeaderText = "MIN";
-
-                dataGridView1.Refresh();
-            }
-          
 
         }
 
@@ -146,7 +156,7 @@ namespace DBapplication
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            if(Salary.Value>0)
+            if (Salary.Value > 0)
             {
 
             }
@@ -175,7 +185,7 @@ namespace DBapplication
         private void Selector_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            switch(Selector.SelectedIndex)
+            switch (Selector.SelectedIndex)
             {
                 case 0:
 
@@ -266,7 +276,7 @@ namespace DBapplication
 
         private void Execute1_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -286,6 +296,11 @@ namespace DBapplication
         }
 
         private void Dep_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

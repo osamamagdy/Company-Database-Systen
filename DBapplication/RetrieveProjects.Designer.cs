@@ -139,7 +139,7 @@
             // 
             this.Salary.Location = new System.Drawing.Point(74, 30);
             this.Salary.Maximum = new decimal(new int[] {
-            100000,
+            1000000,
             0,
             0,
             0});
@@ -248,7 +248,7 @@
             // 
             this.Hours.Location = new System.Drawing.Point(131, 103);
             this.Hours.Maximum = new decimal(new int[] {
-            100000,
+            1000,
             0,
             0,
             0});
@@ -338,6 +338,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 22;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label8
             // 
