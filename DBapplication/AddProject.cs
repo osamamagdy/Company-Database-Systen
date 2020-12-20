@@ -44,5 +44,10 @@ namespace DBapplication
                 }
             }
         }
+
+        private void AddProject_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

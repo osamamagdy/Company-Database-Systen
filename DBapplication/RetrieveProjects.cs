@@ -59,22 +59,58 @@ namespace DBapplication
 
         private void Execute_Click(object sender, EventArgs e)
         {
-            
-          // DataTable dt = controllerObj.SelectProject(comboBox1.Text);
+            controllerObj = new Controller();
+            if (Selector.SelectedIndex==0)
+            {
+
+                int s = Convert.ToInt32(Salary.Value);
 
 
-            if (Selector.SelectedIndex == 6)
-            {
-               DataTable dt = controllerObj.GetMMA();
-                dataGridView1.DataSource = dt;
+                
+                 DataTable d= controllerObj.show_employees_by_salary(s);
+
+                dataGridView1.DataSource = d;
                 dataGridView1.Refresh();
             }
-            if (Selector.SelectedIndex == 5)
+            else if(Selector.SelectedIndex == 1)
             {
-                DataTable dt = controllerObj.GetEmployee123(comboBox4.Text);
-                dataGridView1.DataSource = dt;
+
+                string gen;
+                if (Female.Checked&& !Male.Checked)
+                    gen = "F";
+                else if(Male.Checked&&!Female.Checked)
+                {
+
+                    gen = "M";
+                }
+                else if(!Male.Checked && !Female.Checked)
+                {
+                    MessageBox.Show("Please Select the Gender");
+                    return;
+
+                }
+                else
+                {
+
+                   
+                    return;
+                }
+
+                string dep = Dep_comboBox.Text;
+                 DataTable d= controllerObj.show_Employees_by_gender_in_Dep(gen, dep);
+                dataGridView1.DataSource = d;
+                dataGridView1.Refresh();
+
+            }
+            else if(Selector.SelectedIndex == 2)
+            {
+                string Dp = comboBox1.Text;
+                DataTable d = controllerObj.Get_departments_names(Dp);
+
+                dataGridView1.DataSource = d;
                 dataGridView1.Refresh();
             }
+
             if (Selector.SelectedIndex == 4)
             {
                 DataTable dt = controllerObj.GetManagers();
@@ -82,6 +118,19 @@ namespace DBapplication
                 dataGridView1.Refresh();
             }
 
+            if (Selector.SelectedIndex == 5)
+            {
+                DataTable dt = controllerObj.GetEmployee123(comboBox4.Text);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+            if (Selector.SelectedIndex == 6)
+            {
+               DataTable dt = controllerObj.GetMMA();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+          
 
 
 
@@ -225,6 +274,21 @@ namespace DBapplication
         }
 
         private void Gender_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Female_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Male_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dep_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -26,6 +26,12 @@ namespace DBapplication
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable SelectAllSSN()
+        {
+            string query = "SELECT SSN FROM Employee;";
+            return dbMan.ExecuteReader(query);
+        }
+
 
         public int InsertProject(string Pname, int pnumber, string Plocation, int Dnum)
         {
@@ -74,20 +80,54 @@ namespace DBapplication
         //FunctionName "returnType" SelectAllEmployeesWithSalaryLessThan(?)
         //Make Sure to show only SSN and Address Not all columns
 
+        public DataTable show_employees_by_salary(int salary)
+        {
+
+            string query = "SELECT SSN,Address FROM Employee where Salary<" + salary + ";";
+            return dbMan.ExecuteReader(query);
+
+
+        }
         //TODO:
         //Get all female employees who work in "Administration" department
         //FunctionName "returnType" GetAllGenderWorkingInDepartment(?,?)
         //Make sure to get their Names and maybe SSN only
+        public DataTable show_Employees_by_gender_in_Dep(string gender,string Dep)
+        {
+            string query = "SELECT Fname,Minit,Lname,SSN FROM Employee,Department  Where Dno=Dnumber and Sex='"+ gender + "' and Dname='" + Dep + "' ;";
+
+
+            return dbMan.ExecuteReader(query);
+
+        }
+
 
         //TODO:
         //Get departments names for all departments located at "Houston" (1 mark)
         //FunctionName: "returnType" GetDepartmentNamesAtLocation(?)
         //Just Get the Names
 
+        public DataTable Get_departments_names(string name)
+        {
+
+
+
+            string query = "SELECT Dname from Department as D,Dept_Locations as L where D.Dnumber=L.Dnumber and L.Dlocation='"+ name + "'; ";
+
+
+            return dbMan.ExecuteReader(query);
+        }
 
         //TODO:
         //Insert a new department. (1 mark)
         //Make sure all the required fields are given and if any important Field missing, give the user appropriate message
+        public int InsertDepartment(string name, int number, string SSN, string Date)
+        {
+            string query = "insert into Department values " +
+                            " ('" + name + "'," + number + ",'" + Int32.Parse(  SSN  ) + "','" + Date + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
 
 
         //(To be delivered next lab)
@@ -98,6 +138,15 @@ namespace DBapplication
         //and work less than 35 hours. (1 marks)
 
         //6- Allow user to update salary of an employee of a certain SSN. (1 mark)
+
+        public int UpdateSalary( int number, string SSN)
+        {
+            string query = "  Update Employee set Salary= " + number + " where SSN = " + Int32.Parse(SSN) + " ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+
         //7-Get the last names of department managers and their salaries. (1 mark)
         //8-Get Name and SSN for all employees working in "Research" department or working on projects controlled by "Research" department. (2 marks)
         //9-Get maximum, minimum and average salary for employees(1 mark)

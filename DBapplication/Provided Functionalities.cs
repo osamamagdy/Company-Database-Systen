@@ -18,6 +18,8 @@ namespace DBapplication
             if (a == 0) //1 for admin, 0 for other
             {
                 this.button1.Enabled = false;
+                this.button4.Enabled = false;
+                this.button5.Enabled = false;
             }
             this.Parent = Parent;
             if(Parent != null)
@@ -48,6 +50,24 @@ namespace DBapplication
         {
             if (Parent != null)
                 Parent.Show();
+        }
+
+        private void Provided_Functionalities_Load(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddDepartment d = new AddDepartment();
+            d.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UpdateSalary u = new UpdateSalary();
+            u.Show();
         }
     }
 }
