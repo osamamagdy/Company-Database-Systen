@@ -111,12 +111,26 @@ namespace DBapplication
                 dataGridView1.Refresh();
             }
 
-          
+            if (Selector.SelectedIndex == 4)
+            {
+                DataTable dt = controllerObj.GetManagers();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
 
-            //comented by esraa
-            //DataTable dt = controllerObj.SelectProject(comboBox1.Text);
-            //dataGridView1.DataSource = dt;
-            //dataGridView1.Refresh();
+            if (Selector.SelectedIndex == 5)
+            {
+                DataTable dt = controllerObj.GetEmployee123(comboBox4.Text);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+            if (Selector.SelectedIndex == 6)
+            {
+               DataTable dt = controllerObj.GetMMA();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+          
 
 
 
@@ -243,6 +257,7 @@ namespace DBapplication
                     Q3.Visible = false;
                     Q5.Visible = false;
                     Q8.Visible = false;
+
                     break;
             }
         }
@@ -254,6 +269,7 @@ namespace DBapplication
 
         private void Execute1_Click(object sender, EventArgs e)
         {
+            
 
         }
 
