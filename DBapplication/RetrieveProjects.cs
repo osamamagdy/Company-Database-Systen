@@ -17,14 +17,39 @@ namespace DBapplication
         public RetrieveProjects()
         {
             InitializeComponent();
-            Execute2.Visible = false;
-            Department_Conditions.Visible = false;
-            Employee_Conditions.Visible = false;
+            Execute.Visible = false;
+            Q1.Visible = false;
+            Q2.Visible = false;
+            Q3.Visible = false;
+            Q5.Visible = false;
+            Q8.Visible = false;
             controllerObj = new Controller();
-            DataTable dt = controllerObj.SelectDepLoc();
+
+            DataTable dt;
+
+            //Data for Q2 Combobox
+            dt = controllerObj.SelectDepName();
+            Dep_comboBox.DataSource = dt;
+            Dep_comboBox.DisplayMember = "Dname";
+
+            //Data for Q3 Combobox
+            dt = controllerObj.SelectDepLoc();
             comboBox1.DataSource = dt;
             comboBox1.DisplayMember = "Dlocation";
-           
+
+            //Data for Q5 Combobox
+            dt = controllerObj.SelectProjectLoc();
+            comboBox2.DataSource = dt;
+            comboBox2.DisplayMember = "Plocation";
+            comboBox3.DataSource = dt;
+            comboBox3.DisplayMember = "Plocation";
+
+            //Data for Q8 Combobox
+            dt = controllerObj.SelectDepName();
+            comboBox4.DataSource = dt;
+            comboBox4.DisplayMember = "Dname";
+
+
         }
         private void RetrieveProjects_Load(object sender, EventArgs e)
         {
@@ -79,23 +104,87 @@ namespace DBapplication
 
         private void Selector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(Selector.SelectedIndex == 0)
+
+            switch(Selector.SelectedIndex)
             {
-                Execute2.Visible = true;
-                Employee_Conditions.Visible = true;
-                Department_Conditions.Visible = false;
-            }
-            else if (Selector.SelectedIndex == 1)
-            {
-                Execute2.Visible = true;
-                Department_Conditions.Visible = true;
-                Employee_Conditions.Visible = false;
-            }
-            else
-            {
-                Execute2.Visible = false;
-                Department_Conditions.Visible = false;
-                Employee_Conditions.Visible = false;
+                case 0:
+
+                    Execute.Visible = true;
+                    Q1.Visible = true;
+                    Q2.Visible = false;
+                    Q3.Visible = false;
+                    Q5.Visible = false;
+                    Q8.Visible = false;
+
+                    break;
+                case 1:
+
+                    Execute.Visible = true;
+                    Q1.Visible = false;
+                    Q2.Visible = true;
+                    Q3.Visible = false;
+                    Q5.Visible = false;
+                    Q8.Visible = false;
+
+                    break;
+                case 2:
+
+                    Execute.Visible = true;
+                    Q1.Visible = false;
+                    Q2.Visible = false;
+                    Q3.Visible = true;
+                    Q5.Visible = false;
+                    Q8.Visible = false;
+
+                    break;
+                case 3:
+
+                    Execute.Visible = true;
+                    Q1.Visible = false;
+                    Q2.Visible = false;
+                    Q3.Visible = false;
+                    Q5.Visible = true;
+                    Q8.Visible = false;
+
+                    break;
+                case 4:
+
+                    Execute.Visible = true;
+                    Q1.Visible = false;
+                    Q2.Visible = false;
+                    Q3.Visible = false;
+                    Q5.Visible = false;
+                    Q8.Visible = false;
+
+                    break;
+                case 5:
+
+                    Execute.Visible = true;
+                    Q1.Visible = false;
+                    Q2.Visible = false;
+                    Q3.Visible = false;
+                    Q5.Visible = false;
+                    Q8.Visible = true;
+
+                    break;
+                case 6:
+
+                    Execute.Visible = true;
+                    Q1.Visible = false;
+                    Q2.Visible = false;
+                    Q3.Visible = false;
+                    Q5.Visible = false;
+                    Q8.Visible = false;
+
+                    break;
+                default:
+                    Execute.Visible = false;
+                    Q1.Visible = false;
+                    Q2.Visible = false;
+                    Q3.Visible = false;
+                    Q5.Visible = false;
+                    Q8.Visible = false;
+                    break;
             }
         }
 
@@ -105,6 +194,11 @@ namespace DBapplication
         }
 
         private void Execute1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gender_Enter(object sender, EventArgs e)
         {
 
         }

@@ -53,6 +53,22 @@ namespace DBapplication
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable SelectDepName()
+        {
+            string query = "SELECT DISTINCT Dname FROM Department;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable SelectProjectLoc()
+        {
+            string query = "SELECT DISTINCT Plocation FROM Project;";
+            return dbMan.ExecuteReader(query);
+        }
+
+
+
+
+
         //TODO:
         //Get SSN and address for all employees with salary less than 40000.
         //FunctionName "returnType" SelectAllEmployeesWithSalaryLessThan(?)
