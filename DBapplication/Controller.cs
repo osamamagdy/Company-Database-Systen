@@ -102,5 +102,32 @@ namespace DBapplication
         //8-Get Name and SSN for all employees working in "Research" department or working on projects controlled by "Research" department. (2 marks)
         //9-Get maximum, minimum and average salary for employees(1 mark)
 
+
+
+        public DataTable GetManagers() // 7
+        {
+
+            string query = "SELECT LNAME,SALARY FROM Employee,Department WHERE Employee.SSN = Department.Mgr_SSN";
+
+            return dbMan.ExecuteReader(query);
+
+        }
+
+
+        public DataTable GetEmployee123(string Department)  // 8
+        {
+            string query = "SELECT DISTINCT Fname , SSN FROM Employee, Department, Project, Works_On WHERE(Employee.Dno = Department.Dnumber AND Department.Dname = '" + Department + "') OR(Works_On.Essn = Employee.SSN AND Works_On.Pno = Project.Pnumber AND Project.Dnum = Department.Dnumber AND Department.Dname = '" + Department+ "')";
+
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetMMA() //9
+        {
+            string query = "SELECT AVG(SALARY),MAX(SALARY),MIN(SALARY) FROM Employee";
+
+            return dbMan.ExecuteReader(query);
+        }
+
+
     }
 }

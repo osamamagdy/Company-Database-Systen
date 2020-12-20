@@ -59,9 +59,33 @@ namespace DBapplication
 
         private void Execute_Click(object sender, EventArgs e)
         {
-            DataTable dt = controllerObj.SelectProject(comboBox1.Text);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Refresh();
+            
+          // DataTable dt = controllerObj.SelectProject(comboBox1.Text);
+
+
+            if (Selector.SelectedIndex == 6)
+            {
+               DataTable dt = controllerObj.GetMMA();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+            if (Selector.SelectedIndex == 5)
+            {
+                DataTable dt = controllerObj.GetEmployee123(comboBox4.Text);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+            if (Selector.SelectedIndex == 4)
+            {
+                DataTable dt = controllerObj.GetManagers();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+
+
+
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -184,6 +208,7 @@ namespace DBapplication
                     Q3.Visible = false;
                     Q5.Visible = false;
                     Q8.Visible = false;
+
                     break;
             }
         }
@@ -195,6 +220,7 @@ namespace DBapplication
 
         private void Execute1_Click(object sender, EventArgs e)
         {
+            
 
         }
 
