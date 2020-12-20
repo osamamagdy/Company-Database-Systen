@@ -72,17 +72,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 226);
+            this.label4.Location = new System.Drawing.Point(40, 217);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 17);
+            this.label4.Size = new System.Drawing.Size(121, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Department number";
+            this.label4.Text = "Department name";
             // 
             // ProjectName_textBox
             // 
             this.ProjectName_textBox.Location = new System.Drawing.Point(255, 53);
-            this.ProjectName_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProjectName_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.ProjectName_textBox.Name = "ProjectName_textBox";
             this.ProjectName_textBox.Size = new System.Drawing.Size(132, 22);
             this.ProjectName_textBox.TabIndex = 4;
@@ -90,7 +90,7 @@
             // ProjectNo_textBox
             // 
             this.ProjectNo_textBox.Location = new System.Drawing.Point(255, 101);
-            this.ProjectNo_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProjectNo_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.ProjectNo_textBox.Name = "ProjectNo_textBox";
             this.ProjectNo_textBox.Size = new System.Drawing.Size(132, 22);
             this.ProjectNo_textBox.TabIndex = 5;
@@ -98,7 +98,7 @@
             // ProjectLocation_textBox
             // 
             this.ProjectLocation_textBox.Location = new System.Drawing.Point(255, 153);
-            this.ProjectLocation_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProjectLocation_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.ProjectLocation_textBox.Name = "ProjectLocation_textBox";
             this.ProjectLocation_textBox.Size = new System.Drawing.Size(132, 22);
             this.ProjectLocation_textBox.TabIndex = 6;
@@ -106,8 +106,8 @@
             // DepartmentNo_ComboBox
             // 
             this.DepartmentNo_ComboBox.FormattingEnabled = true;
-            this.DepartmentNo_ComboBox.Location = new System.Drawing.Point(255, 217);
-            this.DepartmentNo_ComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DepartmentNo_ComboBox.Location = new System.Drawing.Point(244, 214);
+            this.DepartmentNo_ComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.DepartmentNo_ComboBox.Name = "DepartmentNo_ComboBox";
             this.DepartmentNo_ComboBox.Size = new System.Drawing.Size(160, 24);
             this.DepartmentNo_ComboBox.TabIndex = 7;
@@ -115,7 +115,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(316, 309);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 8;
@@ -137,7 +137,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddProject";
             this.Text = "Add Project";
             this.Load += new System.EventHandler(this.AddProject_Load);

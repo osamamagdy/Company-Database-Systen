@@ -64,8 +64,6 @@ namespace DBapplication
             {
 
                 int s = Convert.ToInt32(Salary.Value);
-
-
                 
                  DataTable d= controllerObj.show_employees_by_salary(s);
 
@@ -91,8 +89,6 @@ namespace DBapplication
                 }
                 else
                 {
-
-                   
                     return;
                 }
 
@@ -128,12 +124,13 @@ namespace DBapplication
             {
                DataTable dt = controllerObj.GetMMA();
                 dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].HeaderText = "AVG";
+                dataGridView1.Columns[1].HeaderText = "MAX";
+                dataGridView1.Columns[2].HeaderText = "MIN";
+
                 dataGridView1.Refresh();
             }
           
-
-
-
 
         }
 

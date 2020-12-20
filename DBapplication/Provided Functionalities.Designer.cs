@@ -64,7 +64,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 28);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Retrieve Projects";
+            this.button3.Text = "Retrieve Data";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.ViewProjectsButton_Click);
             // 
