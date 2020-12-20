@@ -42,3 +42,18 @@ E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Com
 E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.csproj.CoreCompileInputs.cache
 E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.exe
 E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.pdb
+D:\Company-Database-Systen\DBapplication\bin\Debug\DBapplication.exe.config
+D:\Company-Database-Systen\DBapplication\bin\Debug\DBapplication.exe
+D:\Company-Database-Systen\DBapplication\bin\Debug\DBapplication.pdb
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.csprojAssemblyReference.cache
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.AddProject.resources
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.AdminLogin.resources
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.Properties.Resources.resources
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.Provided_Functionalities.resources
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.RetrieveProjects.resources
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.ViewEmployees.resources
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.Welcome.resources
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.csproj.GenerateResource.cache
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.csproj.CoreCompileInputs.cache
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.exe
+D:\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.pdb

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDepartment.Designer.cs">
+      <DependentUpon>AddDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     <Compile Include="RetrieveProjects.Designer.cs">
       <DependentUpon>RetrieveProjects.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSalary.Designer.cs">
+      <DependentUpon>UpdateSalary.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValidationClass.cs" />
     <Compile Include="ViewEmployees.cs">
       <SubType>Form</SubType>
@@ -87,6 +99,9 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddDepartment.resx">
+      <DependentUpon>AddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddProject.resx">
       <DependentUpon>AddProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RetrieveProjects.resx">
       <DependentUpon>RetrieveProjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSalary.resx">
+      <DependentUpon>UpdateSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewEmployees.resx">
       <DependentUpon>ViewEmployees.cs</DependentUpon>
