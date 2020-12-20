@@ -26,6 +26,12 @@ namespace DBapplication
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable SelectAllSSN()
+        {
+            string query = "SELECT SSN FROM Employee;";
+            return dbMan.ExecuteReader(query);
+        }
+
 
         public int InsertProject(string Pname, int pnumber, string Plocation, int Dnum)
         {
@@ -88,6 +94,13 @@ namespace DBapplication
         //TODO:
         //Insert a new department. (1 mark)
         //Make sure all the required fields are given and if any important Field missing, give the user appropriate message
+        public int InsertDepartment(string name, int number, string SSN, string Date)
+        {
+            string query = "insert into Department values " +
+                            " ('" + name + "'," + number + ",'" + Int32.Parse(  SSN  ) + "','" + Date + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
 
 
         //(To be delivered next lab)
@@ -98,6 +111,15 @@ namespace DBapplication
         //and work less than 35 hours. (1 marks)
 
         //6- Allow user to update salary of an employee of a certain SSN. (1 mark)
+
+        public int UpdateSalary( int number, string SSN)
+        {
+            string query = "  Update Employee set Salary= " + number + " where SSN = " + Int32.Parse(SSN) + " ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+
         //7-Get the last names of department managers and their salaries. (1 mark)
         //8-Get Name and SSN for all employees working in "Research" department or working on projects controlled by "Research" department. (2 marks)
         //9-Get maximum, minimum and average salary for employees(1 mark)

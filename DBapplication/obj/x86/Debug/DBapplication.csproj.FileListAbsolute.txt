@@ -42,3 +42,5 @@ E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Com
 E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.csproj.CoreCompileInputs.cache
 E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.exe
 E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.pdb
+E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.AddDepartment.resources
+E:\College\Second Year\First Simester\Introduction to Databases\Week 9\Lab 5\Company-Database-Systen\DBapplication\obj\x86\Debug\DBapplication.UpdateSalary.resources
