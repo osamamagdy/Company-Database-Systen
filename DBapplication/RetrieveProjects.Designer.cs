@@ -51,10 +51,10 @@
             this.Q2 = new System.Windows.Forms.GroupBox();
             this.Q3 = new System.Windows.Forms.GroupBox();
             this.Q5 = new System.Windows.Forms.GroupBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salary)).BeginInit();
             this.Gender.SuspendLayout();
@@ -168,6 +168,7 @@
             this.Male.TabStop = true;
             this.Male.Text = "Male";
             this.Male.UseVisualStyleBackColor = true;
+            this.Male.CheckedChanged += new System.EventHandler(this.Male_CheckedChanged);
             // 
             // Female
             // 
@@ -179,6 +180,7 @@
             this.Female.TabStop = true;
             this.Female.Text = "Female";
             this.Female.UseVisualStyleBackColor = true;
+            this.Female.CheckedChanged += new System.EventHandler(this.Female_CheckedChanged);
             // 
             // Gender
             // 
@@ -199,6 +201,7 @@
             this.Dep_comboBox.Name = "Dep_comboBox";
             this.Dep_comboBox.Size = new System.Drawing.Size(121, 24);
             this.Dep_comboBox.TabIndex = 13;
+            this.Dep_comboBox.SelectedIndexChanged += new System.EventHandler(this.Dep_comboBox_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -328,6 +331,24 @@
             this.Q5.TabStop = false;
             this.Q5.Text = "Select Project Locations and Working Hours";
             // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(287, 42);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 24);
+            this.comboBox3.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(259, 45);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 17);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "or";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -345,24 +366,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 19;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(259, 45);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 17);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "or";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(287, 42);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 22;
             // 
             // RetrieveProjects
             // 

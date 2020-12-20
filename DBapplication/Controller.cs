@@ -74,16 +74,43 @@ namespace DBapplication
         //FunctionName "returnType" SelectAllEmployeesWithSalaryLessThan(?)
         //Make Sure to show only SSN and Address Not all columns
 
+        public DataTable show_employees_by_salary(int salary)
+        {
+
+            string query = "SELECT SSN,Address FROM Employee where Salary<" + salary + ";";
+            return dbMan.ExecuteReader(query);
+
+
+        }
         //TODO:
         //Get all female employees who work in "Administration" department
         //FunctionName "returnType" GetAllGenderWorkingInDepartment(?,?)
         //Make sure to get their Names and maybe SSN only
+        public DataTable show_Employees_by_gender_in_Dep(string gender,string Dep)
+        {
+            string query = "SELECT Fname,Minit,Lname,SSN FROM Employee,Department  Where Dno=Dnumber and Sex='"+ gender + "' and Dname='" + Dep + "' ;";
+
+
+            return dbMan.ExecuteReader(query);
+
+        }
+
 
         //TODO:
         //Get departments names for all departments located at "Houston" (1 mark)
         //FunctionName: "returnType" GetDepartmentNamesAtLocation(?)
         //Just Get the Names
 
+        public DataTable Get_departments_names(string name)
+        {
+
+
+
+            string query = "SELECT Dname from Department as D,Dept_Locations as L where D.Dnumber=L.Dnumber and L.Dlocation='"+ name + "'; ";
+
+
+            return dbMan.ExecuteReader(query);
+        }
 
         //TODO:
         //Insert a new department. (1 mark)
