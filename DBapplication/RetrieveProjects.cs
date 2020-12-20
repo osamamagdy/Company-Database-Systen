@@ -12,9 +12,14 @@ namespace DBapplication
     public partial class RetrieveProjects : Form
     {
         Controller controllerObj;
+
+        string condition;
         public RetrieveProjects()
         {
             InitializeComponent();
+            Execute2.Visible = false;
+            Department_Conditions.Visible = false;
+            Employee_Conditions.Visible = false;
             controllerObj = new Controller();
             DataTable dt = controllerObj.SelectDepLoc();
             comboBox1.DataSource = dt;
@@ -34,6 +39,74 @@ namespace DBapplication
             dataGridView1.Refresh();
         }
 
-       
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if(Salary.Value>0)
+            {
+
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Project_Loc_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Selector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(Selector.SelectedIndex == 0)
+            {
+                Execute2.Visible = true;
+                Employee_Conditions.Visible = true;
+                Department_Conditions.Visible = false;
+            }
+            else if (Selector.SelectedIndex == 1)
+            {
+                Execute2.Visible = true;
+                Department_Conditions.Visible = true;
+                Employee_Conditions.Visible = false;
+            }
+            else
+            {
+                Execute2.Visible = false;
+                Department_Conditions.Visible = false;
+                Employee_Conditions.Visible = false;
+            }
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Execute1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
