@@ -1,0 +1,16 @@
+
+DBapplication/bin/Debug/DBapplication.pdb
+DBapplication/bin/Debug/DBapplication.exe
+DBapplication/obj/x86/Debug/DBapplication.csproj.CoreCompileInputs.cache
+*.cache
+*.exe
+*.pdb
+*.txt
+*.cache
+DBapplication/obj/x86/Debug/DBapplication.AddDepartment.resources
+DBapplication/obj/x86/Debug/DBapplication.csprojAssemblyReference.cache
+DBapplication/obj/x86/Debug/DBapplication.csprojAssemblyReference.cache
+DBapplication/obj/x86/Debug/DBapplication.UpdateSalary.resources
+DBapplication/obj/x86/Debug/DBapplication.csprojAssemblyReference.cache
+.vs/DBapplication/v16/.suo
+.vs/DBapplication/v16/.suo

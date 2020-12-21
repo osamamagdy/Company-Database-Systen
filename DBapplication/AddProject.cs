@@ -40,7 +40,10 @@ namespace DBapplication
                 else
                 {
                     int r = controllerObj.InsertProject(ProjectName_textBox.Text, (int)PNO, ProjectLocation_textBox.Text, (int)DNO);
-                    MessageBox.Show("Project inserted successfully");
+                    if (r > 0)
+                        MessageBox.Show("Project inserted successfully");
+                    else
+                        MessageBox.Show("Invalid input");
                 }
             }
         }

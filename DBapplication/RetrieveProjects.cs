@@ -132,7 +132,12 @@ namespace DBapplication
                 case 6:
 
                     DataTable dt = controllerObj.GetMMA();
+                    
                     dataGridView1.DataSource = dt;
+                    dataGridView1.Columns[0].HeaderText = "AVG";
+                    dataGridView1.Columns[1].HeaderText = "MAX";
+                    dataGridView1.Columns[2].HeaderText = "MIN";
+
                     dataGridView1.Refresh();
 
                     break;

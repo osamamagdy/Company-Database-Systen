@@ -46,7 +46,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Hours = new System.Windows.Forms.NumericUpDown();
             this.Q8 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.Q1 = new System.Windows.Forms.GroupBox();
             this.Q2 = new System.Windows.Forms.GroupBox();
             this.Q3 = new System.Windows.Forms.GroupBox();
@@ -267,21 +266,6 @@
             this.Q8.TabStop = false;
             this.Q8.Text = "Select Department";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "SSN",
-            "Address",
-            "Name",
-            "Salary",
-            "Last Name"});
-            this.checkedListBox1.Location = new System.Drawing.Point(1135, 503);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(202, 106);
-            this.checkedListBox1.TabIndex = 21;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
-            // 
             // Q1
             // 
             this.Q1.Controls.Add(this.label4);
@@ -378,7 +362,6 @@
             this.Controls.Add(this.Q2);
             this.Controls.Add(this.Q1);
             this.Controls.Add(this.Execute);
-            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.Q8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Selector);
@@ -427,7 +410,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown Hours;
         private System.Windows.Forms.GroupBox Q8;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.GroupBox Q1;
         private System.Windows.Forms.GroupBox Q2;
         private System.Windows.Forms.GroupBox Q3;
