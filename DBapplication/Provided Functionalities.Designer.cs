@@ -104,7 +104,7 @@
             this.Name = "Provided_Functionalities";
             this.Text = "Provided_Functionalities";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Provided_Functionalities_FormClosed);
-            this.Load += new System.EventHandler(this.Provided_Functionalities_Load);
+           // this.Load += new System.EventHandler(this.Provided_Functionalities_Load);
             this.ResumeLayout(false);
 
         }

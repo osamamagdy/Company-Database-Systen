@@ -309,5 +309,10 @@ namespace DBapplication
         {
 
         }
+
+        private void Q2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

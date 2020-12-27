@@ -196,7 +196,7 @@
             // Dep_comboBox
             // 
             this.Dep_comboBox.FormattingEnabled = true;
-            this.Dep_comboBox.Location = new System.Drawing.Point(73, 61);
+            this.Dep_comboBox.Location = new System.Drawing.Point(53, 80);
             this.Dep_comboBox.Name = "Dep_comboBox";
             this.Dep_comboBox.Size = new System.Drawing.Size(121, 24);
             this.Dep_comboBox.TabIndex = 13;
@@ -259,9 +259,9 @@
             // 
             this.Q8.Controls.Add(this.label6);
             this.Q8.Controls.Add(this.comboBox4);
-            this.Q8.Location = new System.Drawing.Point(733, 45);
+            this.Q8.Location = new System.Drawing.Point(803, 180);
             this.Q8.Name = "Q8";
-            this.Q8.Size = new System.Drawing.Size(395, 163);
+            this.Q8.Size = new System.Drawing.Size(510, 122);
             this.Q8.TabIndex = 19;
             this.Q8.TabStop = false;
             this.Q8.Text = "Select Department";
@@ -270,7 +270,7 @@
             // 
             this.Q1.Controls.Add(this.label4);
             this.Q1.Controls.Add(this.Salary);
-            this.Q1.Location = new System.Drawing.Point(468, 45);
+            this.Q1.Location = new System.Drawing.Point(782, 60);
             this.Q1.Name = "Q1";
             this.Q1.Size = new System.Drawing.Size(200, 100);
             this.Q1.TabIndex = 22;
@@ -282,18 +282,19 @@
             this.Q2.Controls.Add(this.Gender);
             this.Q2.Controls.Add(this.label5);
             this.Q2.Controls.Add(this.Dep_comboBox);
-            this.Q2.Location = new System.Drawing.Point(429, 214);
+            this.Q2.Location = new System.Drawing.Point(803, 321);
             this.Q2.Name = "Q2";
-            this.Q2.Size = new System.Drawing.Size(555, 146);
+            this.Q2.Size = new System.Drawing.Size(593, 175);
             this.Q2.TabIndex = 23;
             this.Q2.TabStop = false;
             this.Q2.Text = "Select Gender & Department";
+            this.Q2.Enter += new System.EventHandler(this.Q2_Enter);
             // 
             // Q3
             // 
             this.Q3.Controls.Add(this.comboBox1);
             this.Q3.Controls.Add(this.label1);
-            this.Q3.Location = new System.Drawing.Point(1160, 45);
+            this.Q3.Location = new System.Drawing.Point(1028, 60);
             this.Q3.Name = "Q3";
             this.Q3.Size = new System.Drawing.Size(324, 100);
             this.Q3.TabIndex = 24;
@@ -308,9 +309,9 @@
             this.Q5.Controls.Add(this.comboBox2);
             this.Q5.Controls.Add(this.label7);
             this.Q5.Controls.Add(this.Hours);
-            this.Q5.Location = new System.Drawing.Point(1007, 215);
+            this.Q5.Location = new System.Drawing.Point(64, 255);
             this.Q5.Name = "Q5";
-            this.Q5.Size = new System.Drawing.Size(449, 149);
+            this.Q5.Size = new System.Drawing.Size(689, 241);
             this.Q5.TabIndex = 25;
             this.Q5.TabStop = false;
             this.Q5.Text = "Select Project Locations and Working Hours";
@@ -360,9 +361,9 @@
             this.Controls.Add(this.Q5);
             this.Controls.Add(this.Q3);
             this.Controls.Add(this.Q2);
+            this.Controls.Add(this.Q8);
             this.Controls.Add(this.Q1);
             this.Controls.Add(this.Execute);
-            this.Controls.Add(this.Q8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Selector);
             this.Controls.Add(this.dataGridView1);
